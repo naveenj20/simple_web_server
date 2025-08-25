@@ -22,7 +22,7 @@ Testing the webserver.
 
 # PROGRAM:
 
-''' python
+``` python
 from http.server import HTTPServer,BaseHTTPRequestHandler
 
 content="""
@@ -72,6 +72,7 @@ content="""
 </html>
 """
 
+
 class MyServer(BaseHTTPRequestHandler):
     def do_GET(self):
         print("Get request received...")
@@ -84,7 +85,7 @@ print("This is my webserver")
 server_address =('',8000)
 httpd = HTTPServer(server_address,MyServer)
 httpd.serve_forever()
-'''
+```
 
 # OUTPUT:
 
